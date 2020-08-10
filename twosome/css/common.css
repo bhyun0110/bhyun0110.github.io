@@ -220,13 +220,110 @@ header .home_btn:hover::after{opacity: 1;}
     color: #63584e;
     font-family: 'Noto Sans KR', sans-serif;
 }
-
-.product_slider01{
+/* .product_area {position: relative;} */
+.product_slider{
     width: 600px;
     margin: 0 auto;
     height: 675px;
 }
-.product_slider01 .bx-wrapper {
+.product_slider .bx-wrapper {
     border: none;
     box-shadow: none;
+}
+
+/* slider button */
+.product_slider .bx-wrapper .bx-controls .bx-controls-direction a {
+    position: absolute;
+    top: 267px;
+    left: 50%;
+    text-indent: -9999px;
+    width: 87px;
+    height: 86px;
+}
+.product_slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev {
+    margin-left: -474px;
+    background: url(../img/btn_prev.png) no-repeat 0 0;
+}
+.product_slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-next {
+    margin-left: 388px;
+    background: url(../img/btn_next.png) no-repeat;
+}
+.product_slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-prev:hover,
+.product_slider .bx-wrapper .bx-controls .bx-controls-direction a.bx-next:hover {background-position: 0 -86px;}
+
+.product_slider .bx-controls .bx-pager{
+    /* border: 1px solid red; */
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border: 1px solid #d4d1be;
+    border-top: 0 none;
+    width: 56px;
+    margin-left: 313px;
+    padding: 0;
+    bottom: auto;
+}
+.product_slider .bx-controls .bx-pager .bx-pager-item {
+    display: block;
+    border-top: 1px solid #d4d1be;
+    height: 56px;
+}
+.product_slider .bx-controls .bx-pager .bx-pager-item .bx-pager-link {
+    display: block;
+    margin: 0;
+    width: 56px;
+    height: 100%;
+    background-color: #fdfbe1;
+    text-indent: -99999px;
+}
+
+.product_area01 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(1) .bx-pager-link {
+    background-image: url(../img/product_page_0101.png);
+}
+.product_area01 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(2) .bx-pager-link {
+    background-image: url(../img/product_page_0102.png);
+}
+.product_area01 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(3) .bx-pager-link {
+    background-image: url(../img/product_page_0103.png);
+}
+.product_area01 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(4) .bx-pager-link {
+    background-image: url(../img/product_page_0104.png);
+}
+
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(1) .bx-pager-link {
+    background-image: url(../img/product_page_0201.png);
+}
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(2) .bx-pager-link {
+    background-image: url(../img/product_page_0202.png);
+}
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(3) .bx-pager-link {
+    background-image: url(../img/product_page_0203.png);
+}
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(4) .bx-pager-link {
+    background-image: url(../img/product_page_0204.png);
+}
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(5) .bx-pager-link {
+    background-image: url(../img/product_page_0205.png);
+}
+.product_area02 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(6) .bx-pager-link {
+    background-image: url(../img/product_page_0206.png);
+}
+
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(1) .bx-pager-link {
+    background-image: url(../img/product_page_0301.png);
+}
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(2) .bx-pager-link {
+    background-image: url(../img/product_page_0302.png);
+}
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(3) .bx-pager-link {
+    background-image: url(../img/product_page_0303.png);
+}
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(4) .bx-pager-link {
+    background-image: url(../img/product_page_0304.png);
+}
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(5) .bx-pager-link {
+    background-image: url(../img/product_page_0305.png);
+}
+.product_area03 .product_slider .bx-controls .bx-pager .bx-pager-item:nth-child(6) .bx-pager-link {
+    background-image: url(../img/product_page_0306.png);
 }
