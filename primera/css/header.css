@@ -151,13 +151,14 @@ header .header_wrap .utility_wrap>.search {
 header .gnb_wrap > .gnb_menu > li > .gnb_drop {
 	display: none;
 	background-color: #fff;
-	border: 1px solid limegreen;
+	/* border: 1px solid limegreen; */
 	position: absolute;
 	top: 100%;
 	left: 0;
 	right: 0;
 	padding: 60px 0;
 	z-index: 1001;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
 }
 .gnb_drop_wrap{
 	max-width: 1178px;
@@ -168,18 +169,18 @@ header .gnb_wrap > .gnb_menu > li > .gnb_drop {
 	float: left;
 	width: 50%;
 	text-align: left;
-	border: 1px solid palevioletred;
+	/* border: 1px solid palevioletred; */
 }
 .gnb_drop_wrap > .drop_menu > .drop_menu_list{
-	/* float: left; */
+	float: left;
 	width: 196px;
 	margin-right: 60px;
 	overflow: hidden;
-	border: 1px solid orangered;
+	/* border: 1px solid orangered; */
 }
 .gnb_drop_wrap > .drop_menu > .drop_menu_list > li{
 	margin-bottom: 7px;
-	border: 1px solid navy;
+	/* border: 1px solid navy; */
 
 }
 .gnb_drop_wrap > .drop_menu > .drop_menu_list > li > span{
@@ -204,17 +205,17 @@ header .gnb_wrap > .gnb_menu > li > .gnb_drop {
 .gnb_drop_wrap > .drop_banner{
 	float: right;
 	width: 50%;
-	border: 1px solid palevioletred;
+	/* border: 1px solid palevioletred; */
 
 }
 .gnb_drop_wrap > .drop_banner > ul > li{
-	border: 1px solid yellow;
+	/* border: 1px solid yellow; */
 	display: inline-block;
 	margin-left: 30px;
 	width: 44.2%;
 }
 .gnb_drop_wrap > .drop_banner > ul > li > p{
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	font-size: 14px;
 	text-align: left;
 }

@@ -84,8 +84,8 @@ $('.slide').bxSlider({
      pager: true,
      auto: true,
      speed: 1000,
-     autoControls: true,
-     stopAutoOnClick: true,
+
+
  })
 
 //언어 메뉴
