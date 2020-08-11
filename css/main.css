@@ -1,35 +1,96 @@
-header div h2 {
-    margin-top: 20px;
-    text-align: center;
+/* common -----------*/
+*{box-sizing: border-box;}
+body{font-family: 'Rubik', sans-serif;}
+img{width: 100%;}
+.wrap {width: 100%; height: 100vh; background-color: #f3eafc;}
+.inner {
+    width: 80%;
+    margin: 0 auto;
+}
+header {position: relative;}
+header h2 {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    text-align: right;
     font-size: 20px;
     font-weight: bold;
+    line-height: 2;
+    height: 40px;
+    padding: 0 40px;
+    background-color: #fff;
 }
-.portfolio {
+header .left {width: 40px; height: 100vh; position: fixed; top: 0; left: 0; background-color: #fff;}
+header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; background-color: #fff;}
+.container {width: 100%; padding: 0 40px;background-color: #f3eafc;}
+.container .about, .portfolio, .contact {
+    position: relative;
     overflow: hidden;
     margin: 0 auto;
-    width: 80%;
+}
+
+
+/* about ----------- */
+.about {height: 100vh;}
+.about span {width: 30%;display: inline-block; margin-top: 300px;}
+.about .about_text{
+    position: absolute;
+    /* border: 1px solid purple; */
+    top: 400px;
+    left: 60%;
+}
+.about .about_text dl{margin-bottom: 20px;}
+.about .about_text dt {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+.about .about_text dd {font-size: 32px; text-align: right; font-family: 'Rubik', sans-serif; color: rgb(41, 41, 41);}
+.about .about_info {
+    position: relative;
+    overflow: hidden;
+}
+
+.about .about_info dl {float: left; display: inline-block; padding: 10px;border: 1px solid rgb(145, 51, 253);}
+.about .about_info .about_edu dt{margin-bottom: 20px; font-size: 20px; font-family: 'Rubik', sans-serif}
+.about .about_info .about_edu dd{font-size: 16px; font-family: 'Rubik', sans-serif; line-height: 1.5;}
+
+
+/* portfolio -----------*/
+.portfolio .inner span{
+    display: block;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
 }
 .portfolio > ul{
     float: left;
     margin: 20px;
 }
-.portfolio_item {
+.portfolio .portfolio_list {
+    position: relative;
+    height: 500px;
+}
+.portfolio .portfolio_item {
+    position: absolute;
     display: inline-block;
-    width: 33.33333%;
+    width: 50%;
     border: 1px solid #666;
     overflow: hidden;
 }
-.portfolio_item > a {
+.portfolio .portfolio_item>a {
     /* border: 1px solid blue; */
     display: block;
     color: #222;
 }
-.portfolio_item > a > .item_img{
+.portfolio .portfolio_item>a>.item_img {
     overflow: hidden;
-    height: 210px;
+    /* height: 210px; */
 
 }
-.portfolio_item > a > .item_img > img {
+.portfolio .portfolio_item>a>.item_img>img {
     width: 100%;
     /* height: 200px; */
     transition: all .3s;
@@ -38,13 +99,38 @@ header div h2 {
     opacity: .7;
     
 }
-.portfolio_item > a > .item_img > img:hover {
+.portfolio .portfolio_item>a>.item_img>img:hover {
     transform: scale(1);
     opacity: 1;
 }
-.portfolio_item > a > .item_text {
+.portfolio .portfolio_item>a>.item_text {
     padding: 20px;
 }
-.portfolio_item > a > .item_text > dl > dt {
+.portfolio .portfolio_item>a>.item_text>dl>dt {
     font-weight: bold;
 }
+.portfolio .portfolio_info {
+    position: absolute;
+    width: 40%;
+    right: 0;
+    top: 30%;
+}
+.portfolio .portfolio_list.right .portfolio_item {right: 0;}
+.portfolio .portfolio_list.right .portfolio_info{left: 0;}
+.portfolio .portfolio_info h2 {color: rgb(41, 41, 41);font-size: 30px;font-family: 'Rubik', sans-serif;}
+.portfolio .portfolio_info p{margin: 10px 0;color: #666;font-size: 16px;font-family: 'Rubik', sans-serif;}
+
+.contact{height: 80vh;}
+.contact .inner > span {
+    display: block;
+    margin-bottom: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+.contact .contact_info {text-align: right;}
+.contact .contact_info span.qr {display: inline-block; width: 200px;}
+.contact dl, .contact p{text-align: right;}
+.contact dt, .contact p{font-size: 32px; font-family: 'Rubik', sans-serif; font-weight: 700; margin-bottom: 20px;}
+.contact dd{font-size: 24px; font-family: 'Rubik', sans-serif;margin-bottom: 35px;}
+footer {width: 100%; height: 40px; position: fixed; bottom: 0; background-color: #fff;}
