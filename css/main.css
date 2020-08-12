@@ -37,7 +37,7 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
     position: absolute;
     /* border: 1px solid purple; */
     top: 400px;
-    left: 60%;
+    left: 70%;
 }
 .about .about_text dl{margin-bottom: 20px;}
 .about .about_text dt {
@@ -60,7 +60,7 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
 /* portfolio -----------*/
 .portfolio .inner span{
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     font-size: 50px;
     font-weight: bold;
     text-align: left;
@@ -71,7 +71,7 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
 }
 .portfolio .portfolio_list {
     position: relative;
-    height: 500px;
+    height: 100vh;
 }
 .portfolio .portfolio_item {
     position: absolute;
@@ -111,12 +111,13 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
 }
 .portfolio .portfolio_info {
     position: absolute;
-    width: 40%;
+    width: 45%;
     right: 0;
-    top: 30%;
+    /* top: 30%; */
 }
+.portfolio .portfolio_info > div {margin-bottom: 30px;}
 .portfolio .portfolio_list.right .portfolio_item {right: 0;}
-.portfolio .portfolio_list.right .portfolio_info{left: 0;}
+.portfolio .portfolio_list.right .portfolio_info{position: absolute; width: 45%;left: 0;}
 .portfolio .portfolio_info h2 {color: rgb(41, 41, 41);font-size: 30px;font-family: 'Rubik', sans-serif;}
 .portfolio .portfolio_info p{margin: 10px 0;color: #666;font-size: 16px;font-family: 'Rubik', sans-serif;}
 
@@ -133,4 +134,58 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
 .contact dl, .contact p{text-align: right;}
 .contact dt, .contact p{font-size: 32px; font-family: 'Rubik', sans-serif; font-weight: 700; margin-bottom: 20px;}
 .contact dd{font-size: 24px; font-family: 'Rubik', sans-serif;margin-bottom: 35px;}
+
+.svg-wrapper {
+    height: 60px;
+    width: 250px;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+}
+
+.shape {
+    fill: transparent;
+    /*투명하게 공간이 사라짐*/
+    stroke-width: 8px;
+    stroke: #350170;
+    stroke-dasharray: 65 404;
+    stroke-dashoffset: -404;
+    /*시작점으로 부터 뒤로 밀어줌*/
+    /* stroke-dashoffset: 140; 시작점으로 부터 앞으로 140 땡겨줌 (위와 같은 위치로 나옴)*/
+}
+
+.text {
+    color: #666;
+    font-size: 22px;
+    letter-spacing: 2px;
+    /*글자간의 간격 띄워줌*/
+    line-height: 32px;
+    position: relative;
+    top: -52px;
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: draw 0.5s linear forwards;
+    animation: draw 0.5s linear forwards;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 470;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+
+
 footer {width: 100%; height: 40px; position: fixed; bottom: 0; background-color: #fff;}
