@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+/* reset */
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+    word-break: keep-all
+}
+img {
+    border: 0;
+}
+h2, p {margin: 0;}
+ul, ol, li {list-style:none; padding:0;}
+dl, dt, dd {margin:0;}
+Button {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+br {letter-spacing: 0;}
+a { text-decoration: none; }
+
+.modal_wrap{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.modal_container {
+    background-color: #fefefe;
+    padding: 0 10px;
+    max-width: 640px;
+    margin: 300px auto;
+}
+.product_text_box {
+    border-bottom: 1px solid #ebecef;
+    overflow: hidden;
+    padding: 20px 0 20px 10px;
+    color: #535a64;
+}
+.product_text_box .product_text {
+    /* border: 1px solid slateblue; */
+    float: left;
+}
+.product_text_box .product_text > img {
+    width: 26px;
+    vertical-align: bottom;
+}
+
+.product_text_box .product_text .product_title {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.product_text_box .product_text > span {
+    font-size: 16px;
+    /* letter-spacing: -1px; */
+}
+.product_text_box > img {
+    width: 30px;
+    float: right;
+}
+.num_info {
+    border-bottom: 1px solid #ebecef;
+    /* overflow: hidden; */
+    padding: 20px 0 15px 10px;
+}
+.num_info .num_text {
+    margin-bottom: 25px;
+}
+.num_info .num_text > img {
+    width: 26px;
+    vertical-align: bottom;
+}
+.num_info .num_text > span {
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+    color: #ffb600;
+    letter-spacing: -1px;
+}
+.num_info .num_box>input {
+    color: #5c5c5c;
+    margin-left: 40px;
+    font-size: 16px;
+    border: none;
+    width: 150px;
+}
+.num_info .num_box>input:focus::placeholder {
+    color: transparent;
+}
+.num_info .num_box > a {
+    width: 150px;
+    background-color: #ffb600;
+    height: 45px;
+    color: #fff;
+    margin-left: 8px;
+    text-align: center;
+    padding: 10px 20px 10px 13px;
+    font-size: 18px;
+    
+}
+.num_info .num_box > a > img {
+    width: 22px;
+    margin-right: 20px;
+    vertical-align: bottom;
+    
+}
+.address_info .address_box>a {
+    background-color: #ffb600;
+    color: #fff;
+    margin-left: 25px;
+    text-align: center;
+    padding: 10px 20px 10px 13px;
+    font-size: 18px;
+}
+.point_use {
+    border-bottom: 1px solid #ebecef;
+    padding: 20px 0 20px 10px;
+}
+.point_use > img {
+    width: 25px;
+    vertical-align: bottom;
+}
+.point_use > span {
+    color: #535a64;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 10px;
+    letter-spacing: -1px;
+}
+.point_details{
+    padding: 20px 0 20px 10px;
+}
+.point_details .point_box {
+    color: #535a64;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -1px;
+}
+.point_details .point_box > span:nth-child(2){
+    margin-left: 100px;
+    letter-spacing: 0;
+
+}
+.point_details .point_box > img {
+    width: 20px;
+    vertical-align: middle;
+}
+.point_details .point_box:nth-child(2) > span:nth-child(2){
+    margin-left: 65px;
+    letter-spacing: 0;
+}
+.point_details .point_apply {
+    margin-top: 40px;
+    text-align: center;
+}
+.point_details .point_apply > a {
+    width: 200px;
+    height: 80px;
+    background-color: #ffb600;
+    padding: 15px 35px;
+    color: #fff;
+    font-size: 18px;
+}
+.modal_container>p {
+    color: #a3a3a3;
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+}

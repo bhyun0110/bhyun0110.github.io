@@ -1,0 +1,341 @@
+/* common -----------*/
+*{box-sizing: border-box;}
+body{font-family: 'Rubik', sans-serif;}
+img{width: 100%;}
+.wrap {width: 100%; height: 100vh; background-color: #f3eafc;}
+.inner {
+    width: 80%;
+    margin: 0 auto;
+}
+header {position: relative;}
+header h2 {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 2;
+    height: 40px;
+    padding: 0 40px;
+    background-color: #fff;
+}
+header .left {width: 40px; height: 100vh; position: fixed; top: 0; left: 0; background-color: #fff;}
+header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; background-color: #fff;}
+.container {width: 100%; padding: 0 40px;background-color: #f3eafc;}
+.container .main, .about,
+.portfolio,
+.contact {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+/* main ----------- */
+.main {height: 100vh; }
+.main .inner {text-align: center;}
+.main .inner h1 {
+    margin-top: 350px; 
+    /* position: absolute; */
+    /* top: 50%; */
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 80px; 
+    color: #2f055f;
+    letter-spacing: -3px;
+    font-family: 'Rubik'
+}
+.main .inner h1 span {
+    display: inline-block; 
+    animation: animate 2s linear 2 forwards;
+}
+@keyframes animate
+{
+    0%
+    {
+        opacity: 0;
+        transform: rotateY(90deg);
+        filter: blur(3px);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+        filter: blur(0);
+    }
+}
+
+.main .inner h2 {
+    font-size: 60px;
+    line-height: 2;
+    font-family: 'Rubik';
+    color: rgb(65, 65, 65);
+}
+.main .inner .line {
+    width: 100%;
+    height: .8vh;
+    background: #2f055f;
+    display: block;
+    border-radius: 20px;
+}
+
+
+/* about ----------- */
+.about {height: 100vh;}
+/* .about span {width: 30%;display: inline-block; margin-top: 300px;} */
+.about .about_text{
+    /* position: absolute;
+     border: 1px solid purple; 
+    top: 400px;
+    left: 70%; */
+    display: inline-block;
+}
+.about .about_text dl{margin-bottom: 100px;}
+.about .about_text dt {
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-weight: bold;
+        color: #2f055f;
+
+}
+
+.about .about_text dd {
+    color: rgb(65, 65, 65);
+    font-size: 32px;
+    font-family: 'Rubik', sans-serif;
+    /* color: rgb(41, 41, 41); */
+}
+/* .about .about_info {
+    position: relative;
+    overflow: hidden;
+} */
+.about .about_text .edu dt,
+.about_text .skill>p>strong {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: rgb(41, 41, 41);
+}
+.about .about_text .edu dd {
+    font-size: 26px;
+    color: rgb(65, 65, 65);
+}
+.about .about_text .edu dd span {
+    color: #9c9c9c;
+}
+.about_text .skill>p {margin-bottom: 20px;}
+.about_text .skill .title{
+    font-size: 24px;
+    text-align: center;
+    color: rgb(65, 65, 65);
+    margin-top: 10px;
+}
+
+/* .about .about_info dl {float: left; display: inline-block; padding: 10px;border: 1px solid rgb(145, 51, 253);}
+.about .about_info .about_edu dt{margin-bottom: 20px; font-size: 20px; font-family: 'Rubik', sans-serif}
+.about .about_info .about_edu dd{font-size: 16px; font-family: 'Rubik', sans-serif; line-height: 1.5;} */
+
+
+/* portfolio -----------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.portfolio_wrap .inner span {
+    display: block;
+    margin-bottom: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: left;
+}
+.portfolio_wrap>ul {
+    float: left;
+    margin: 20px;
+}
+.clone_tit {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: rgb(41, 41, 41);
+}
+.portfolio,.clone {
+display: flex;
+height: 100vh;
+}
+
+.portfolio_list {
+    width: 35%;
+    margin-right: 20px;
+}
+.portfolio_list:last-child {
+    width: 25%;
+    margin-right: 20px;
+}
+.clone_list {
+    width: 33.3%;
+    margin-right: 20px;
+}
+.portfolio_item {
+    /* position: absolute; */
+    display: inline-block;
+    
+    border: 1px solid #666;
+    overflow: hidden;
+}
+.portfolio_item>a {
+    /* border: 1px solid blue; */
+    display: block;
+    color: #222;
+}
+.portfolio_item>a>.item_img {
+    overflow: hidden;
+    /* height: 210px; */
+
+}
+.portfolio_item>a>.item_img>img {
+    width: 100%;
+    /* height: 200px; */
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    transform: scale(0.9);
+    opacity: .7;
+    
+}
+.portfolio_item>a>.item_img>img:hover {
+    transform: scale(1);
+    opacity: 1;
+}
+.portfolio_item>a>.item_text {
+    padding: 20px;
+}
+.portfolio_item>a>.item_text>dl>dt {
+    font-weight: bold;
+}
+.portfolio_info {
+    margin-top: 20px;
+}
+.portfolio_info>div {
+    margin-bottom: 30px;
+}
+.portfolio_list.right .portfolio_item {
+    right: 0;
+}
+.portfolio_list.right .portfolio_info {
+    position: absolute;
+    width: 45%;
+    left: 0;
+}
+.portfolio_info h2 {
+    color: rgb(41, 41, 41);
+    font-size: 30px;
+    font-family: 'Rubik', sans-serif;
+}
+.portfolio_info p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.contact{height: 80vh;}
+.contact .inner > span {
+    display: block;
+    margin-bottom: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: right;
+}
+.contact .contact_info {text-align: right;}
+.contact .contact_info span.qr {display: inline-block; width: 200px;}
+.contact dl, .contact p{text-align: right;}
+.contact dt, .contact p{font-size: 32px; font-family: 'Rubik', sans-serif; font-weight: 700; margin-bottom: 20px;}
+.contact dd{font-size: 24px; font-family: 'Rubik', sans-serif;margin-bottom: 35px;}
+
+.svg-wrapper {
+    height: 60px;
+    width: 250px;
+    margin-top: 50px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+}
+
+.shape {
+    fill: transparent;
+    /*투명하게 공간이 사라짐*/
+    stroke-width: 8px;
+    stroke: #350170;
+    stroke-dasharray: 65 404;
+    stroke-dashoffset: -404;
+    /*시작점으로 부터 뒤로 밀어줌*/
+    /* stroke-dashoffset: 140; 시작점으로 부터 앞으로 140 땡겨줌 (위와 같은 위치로 나옴)*/
+}
+
+.text {
+    color: #666;
+    font-size: 22px;
+    letter-spacing: 2px;
+    /*글자간의 간격 띄워줌*/
+    line-height: 32px;
+    position: relative;
+    top: -52px;
+}
+
+.svg-wrapper:hover .shape {
+    -webkit-animation: draw 0.5s linear forwards;
+    animation: draw 0.5s linear forwards;
+}
+
+@keyframes draw {
+    0% {
+        stroke-dasharray: 140 470;
+        stroke-dashoffset: -474;
+        stroke-width: 8px;
+    }
+
+    100% {
+        stroke-dasharray: 760;
+        stroke-dashoffset: 0;
+        stroke-width: 2px;
+    }
+}
+
+
+
+footer {width: 100%; height: 40px; position: fixed; bottom: 0; background-color: #fff;}

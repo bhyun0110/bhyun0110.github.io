@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>뉴스레터</title>
+<style>
+    body {margin: 0 auto; padding: 0; background-color: #fff; font-family: 'Noto Sans KR', sans-serif; word-break: keep-all; line-height: 1.7;}
+    img { border: 0; width: 100%;}
+    h2, p {margin: 0;}
+    a { color: #ba00a1; }
+    dl, dt, dd {margin:0;}
+    .wrap{max-width: 100%; margin: 0 auto;  }
+    .container {background-color: #f2f2f2; position: absolute; margin-top: -5px; }
+    section {margin: 0 auto; padding: 25px 30px; background-color: #fff; width: 80%;  border-radius: 25px; margin-bottom: 70px; } 
+    section .content_logo {overflow: hidden; margin-bottom: 45px;}
+    section .content_logo .logo_box {float: left; display: flex; align-items: center; }
+    section .content_logo .logo_box > img {width: 56px;}
+    section .content_logo .logo_box > span {font-size: 20px; font-weight: 500; margin: 0 10px;}
+    section .content_logo .more{float: right; }
+    section .content_logo .more > img {width: 29px; vertical-align: bottom;}
+
+    section.content01 {margin-top: -10%;}
+    section .content_text {font-size: 18px; letter-spacing: -1px;}
+    section.content01 .content_text > img {width: 40%; float: right; margin-left: 20px;}
+    section.content01 .content_text .right {text-align: right;}
+
+    section.content02 .content_text {border: 1px solid #e1e1e1; }
+    section.content02 .content_text .subject {padding: 40px 27px 35px 27px;}
+    section.content02 .content_text .subject > p {margin-top: 25px; }
+    section.content02 .content_text .comment_01,
+    section.content02 .content_text .comment_03 {display: flex; background-color: #f7f7f7; padding: 34px 27px;}
+    section.content02 .content_text .comment_01 > img {width: 50px; height: 50px;}
+    section.content02 .content_text .comment_01 > p,
+    section.content02 .content_text .comment_02 > p,
+    section.content02 .content_text .comment_03 > p {margin-left: 15px; word-break: keep-all; text-align: left;}
+    section.content02 .content_text .comment_02 {display: flex; padding: 34px 27px;}
+    section.content02 .content_text .comment_02 > img.arrow,
+    section.content02 .content_text .comment_03 > img.arrow {width: 23px; height: 21px;}
+    section.content02 .content_text .comment_02 > img.anonymous,
+    section.content02 .content_text .comment_03 > img.anonymous {width: 50px; height: 50px; margin-left: 15px;}
+    section.content02 .content_text .comment_02 > p > strong > span,
+    section.content02 .content_text .comment_03 > p > strong > span {background-color: #ffb8fe;}
+    section.content02 .share {overflow: hidden; margin: 20px 0 30px 0;}
+    section.content02 .share > img {float: left; width: 36px; height: 36px; margin-right: 20px;}
+    section.content02 .content_text02 {display: flex; justify-content: space-between;}
+    section.content02 .content_text02 .mark_left {width: 31px; height: 28px; }
+    section.content02 .content_text02 .mark_right {width: 31px; height: 28px; }
+    section.content02 .content_text02 > p {display: inline-block; width: 85%; font-size: 20px;}
+
+    section.content03 .content_text {overflow: hidden;}
+    section.content03 .content_text > img {max-width: 304px; float: right;}
+    section.content03 .content_text .hashtag {margin: 20px 0 40px;}
+    section.content03 .content_text .hashtag >h2:nth-child(3) {color: #ba00a1; line-height: 2;}
+    section.content03 .bt_team {overflow: hidden;}
+    section.content03 .bt_team .bt_member {min-width: 205px; width: 28%; height: 330px; float: left; border: 1px solid #d7d7d7; padding: 10px; position: relative; text-align: center; margin-right: 10px; margin-bottom: 40px;}
+    section.content03 .bt_team .bt_member:last-child {margin-right: 0;}
+    section.content03 .bt_team .bt_member .plus {width: 24px; position: absolute; right: 10px;}
+    section.content03 .bt_team .bt_member .member {max-width: 123px; width: 100%; margin: 12px 0;}
+    section.content03 .bt_team .bt_member dl > dt {font-size: 24px; color: #ba00a1; margin-bottom: 5px;}
+    section.content03 .bt_team .bt_member dl > dd {text-align: left; font-size: 16px;}
+    
+    /* section.content04 .letter {text-align: center; box-shadow: 5px -3px 10px 0px #ebebeb; margin-top: 40px;} */
+    section.content04 .bg {background: url(/img/bg_02.png) no-repeat; background-position: bottom; height: 548px; background-size: 100% 100%; margin: 30px -30px -25px; border-radius: 0 0 25px 25px;}
+    section.content04 .bg .letter {text-align: center; font-size: 18px; padding-top: 30px; line-height: 1.5;}
+    section.content04 .bg .letter > a > span {color: #ba00a1;}
+    section.content04 .bg .letter > p > img {width: 15px; vertical-align: sub; margin: 0 5px;}
+
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <img src="img/top_bg.png" alt="">
+        </header>
+        <div class="container">
+            <section class="content01">
+                <div class="content_logo">
+                    <div class="logo_box">
+                        <img src="img/logo.png" alt="logo">
+                        <span>Janssen BT</span>
+                    </div>
+                    <div class="more"><img src="img/more.png" alt=""></div>
+                </div>
+                <div class="content_text">
+                    <img src="img/img01.png" alt="">
+                    <p>안녕하세요 한국얀센 Business Technology 팀 입니다. </p><br />
+                    <p>전례 없는 언택트 시대를 새로운 노말로 헤쳐 나가고 계신 얀센 코리아 임직원 여러분! </p><br />
+                    <p>시대의 상황에 맞추어 Business Technology(BT) 팀 또한 언택트 커뮤니케이션의 일환으로 뉴스레터를 준비하였습니다. 
+                        좀 더 열린 자세로 디지털 혁신의 실현을 위한 여정의 단계 단계에서 적절한 도움을 실질적으로 드릴 수 있는 
+                        BT 팀이 되고자 하는 노력이라고 봐 주시면 감사하겠습니다.</p><br />
+                    <p><strong>비즈니스의 성공을 위한 혁신, BT가 함께 합니다.</strong><br>
+                    BT는 여러분께 익숙한 명칭이 아닐 것으로 생각합니다. 
+                    BT 라는 이름은 여러 해 전 Johnson and Johnson 전사 혁신 전략에 맞추어 새롭게 정의한 역활 이름입니다. 
+                    다소 수동적이고 보수적으로 요건을 받아 비용 효율적으로 구현하고 관리하는 것이 기존의 IT 의 역활이였다면, 
+                    비즈니스의 성공을 위해 새로운 가치를 찾고 시장에서 차별화된 경쟁력을 발휘할 수 있도록 돕기 위해 기술 도입을 견인하고 
+                    혁신하는 역활 이름으로 BT 를 이해해 주시면 좋을 것 같습니다.</p><br />
+                    <p><strong>역량과 조직 문화를 바탕으로 한 Digital Transformation</strong><br />
+                    디지털 혁신을 위해서는 IT 를 단순한 시스템 기능이 아닌 새로운 제품이나 서비스의 개발, 기존 업무 프로세스의 개선, 고객 인사이트의 확보, 
+                    직원 생산성의 제고 등을 위한 전략적 수단으로 이해할 필요가 있습니다. 
+                    이는 한 두가지 혹은 한 두번의 멋진 서비스나 솔루션 기능을 개발해 낸다고 이루어지는 일이 아니며, 
+                    작게 시작하더라도 구현과 실행을 통해 결과로부터 배우며 지속적으로 개선해 나가고자 하는 조직 문화를 통해 가능하다고 생각합니다. 
+                    디지털 혁신에서 데이터 역량은 칠수적인 것이며 기술에만 한정된 것은 아닙니다.</p><br />
+                    <p><strong>실질적인 비즈니스 파트너, BT</strong><br />
+                    BT는 한국 얀센의 Digital Lab 및 Data Science Lab 을 통해 한국 얀센의 디지털 역량 개선 및 인식의 전환을 위한 
+                    여러가지 활동을 MESO 팀 분들과 함께 리드하고 있습니다. 
+                    또한 디지털 역량의 가장 핵심적인 기반인 Data Foundation을 위한 리전 프로젝트를 MESO 팀과 함께 리드하며 중장기적인 
+                    디지털 실현의 기초를 다지는 일에 매진하고 있습니다.</p><br />
+                    <p>디지털 혁신의 실현을 위해 고군분투 하시는 여러분들께 혁신을 위한 실질적인 비즈니스 파트너로서 Business Technology Leader가 되겠습니다.</p><br />
+                    <p class="right"><strong>한국 얀센 BTL 드림</strong></p>
+                </div>
+            </section>
+            <section class="content02">
+                <div class="content_logo">
+                    <div class="logo_box">
+                        <img src="img/logo.png" alt="logo">
+                        <span>Janssen BT</span>
+                    </div>
+                    <div class="more"><img src="img/more.png" alt=""></div>
+                </div>
+                <div class="content_text">
+                    <div class="subject">
+                        <h2>#디지털_앞담화</h2>
+                        <p>미래 진단도, 해답도 옳았지만 Digital Transformation에 실패한 GE.<br />
+                        왜 실패했던 것일까요?</p>
+                    </div>
+                    <div class="comment_01">
+                        <img src="img/img00.png" alt="">
+                        <p><strong>익명1</strong> GE는 2011년 제조업 중심을 소프트웨어 중심으로 바꾸겠다고 선언하며 
+                        2020년까지 세계10대 소프트웨어 회사가 되겠다는 비전을 제시했다고 하네요.</p>
+                    </div>
+                    <div class="comment_02">
+                        <img src="img/arrow.png" alt="" class="arrow">
+                        <img src="img/img00.png" alt="" class="anonymous">
+                        <p><strong>익명2</strong> 오 굉장히 잘 알고 계시는군요ㅎㅎ 덧붙여 말씀드리면 
+                            산업용 소프트웨어 운영체제 개발에 주력했는데, 산업분야에서 구글의 안드로이드와 
+                            같은 플랫폼을 만들어 고객사에 개방한다는 목표였으며, 고객사는 이 플랫폼을 
+                            통해 애플리케이션을 만들고 GE는 여기서 생성되는 데이터를 분석해 더 나은 
+                            장비와 솔루션을 제공한다는 계획이었대요.</p>
+                    </div>
+                    <div class="comment_03">
+                        <img src="img/arrow.png" alt="" class="arrow">
+                        <img src="img/img00.png" alt="" class="anonymous">
+                        <p><strong>익명1</strong> 근데 실패한 이유가 몇 가지 되지 않았어요??</p>
+                    </div>
+                    <div class="comment_02">
+                        <img src="img/arrow.png" alt="" class="arrow">
+                        <img src="img/img00.png" alt="" class="anonymous">
+                        <p><strong>익명2</strong> 제가 알고있는 것들 중에 하나는<br/>
+                        <strong><span>'애자일' 대신 가시적인 성과에 집착했다는 것</span></strong>이네요!<br />
+                        모든 공식 석상과 마케팅 자료에서 '디지털'을 언급했지만 작은 팀에서 시작해 
+                        적용하는 대신 시작부터 비대한 조직을 운영했고, 한 팀만 무언가를 변경하거나 
+                        정비해도 전체 개발 과정이 늦춰졌어요. 이는 눈에 보이는 성과에 집착했기 
+                        때문인데요. 실제 디지털 트랜스포메이션을 위하여는 작게 시작하여 빠르게 
+                        돌려보고 실패를 통해 배우는 문화가 정착 되어야 할 것 같네요..!<br/>
+                        그리고 거창한 성과보다는 작은 성공의 경험을 지속적으로 쌓는 것 혹은 작은 
+                        실패로부터 배우고 공유하려는 문화가 중요하다고 생각합니다!
+                        </p>
+                    </div>
+                    <div class="comment_03">
+                        <img src="img/arrow.png" alt="" class="arrow">
+                        <img src="img/img00.png" alt="" class="anonymous">
+                        <p><strong>익명1</strong> 저도 하나 알아요!<br/>
+                        <strong><span>고객들이 사용할 이유를 제시하지 못했다는 것</span></strong>도 실패 이유중 하나에요~<br />
+                        고객사가 필요한 데이터를 분석할 수 있도록 데이터 플랫폼을 구축했으나, 
+                        기기 데이터가 통합되고 각 데이터를 구별할수 있는 개발이 추가될수록 
+                        플랫폼은 복잡해지고 느려졌어요.. 데이터의 정의와 플랫폼의 목적을 분명히 
+                        하지 못합 채 '통합'에만 초점을 두었기 때문인데요. <br/>
+                        데이터에 대한 정확한 이해와 목적 없는 통합은 무용지물이 될 수 있는거 아시죠? 
+                        보여주기 위한 통합이 아니라 고객의 니즈와 데이터에 대한 깊이 있는 
+                        이해에 근거한 실질적인 통합이 필요할 것 같네요!
+                        </p>
+                    </div>
+                </div>
+                <div class="share">
+                    <img src="img/like.png" alt="">
+                    <img src="img/comment.png" alt="">
+                    <img src="img/dm.png" alt="">
+                </div>
+                <div class="content_text02">
+                    <img src="img/mark01.png" alt="" class="mark_left">
+                    <p>성공이나 성과만을 공유하기 보다는 <strong>작은 시도에서 배운 것들을 공유하는 것</strong>이 자연스럽고 지지 받으며, 
+                    보다 <strong>데이터 중심으로 의사 결정이 가능한 조직 문화가 정착 되는 것</strong>이 <strong><span>한국 얀센의 진정한 디지털 트랜스포메이션</span></strong>을 
+                    위해 꼭 필요하다고 생각합니다!</p>
+                    <img src="img/mark02.png" alt="" class="mark_right">
+                </div>
+            </section>
+            <section class="content03">
+                <div class="content_logo">
+                    <div class="logo_box">
+                        <img src="img/logo.png" alt="logo">
+                        <span>Janssen BT</span>
+                    </div>
+                    <div class="more"><img src="img/more.png" alt=""></div>
+                </div>
+                <div class="content_text intro">
+                    <img src="img/img02.png" alt="">
+                    <div class="hashtag">
+                        <h2>#New_Joiner_신상털기</h2>
+                        <h2>#김유리_차장을_소개합니다</h2>
+                        <h2>#Digital #CRM</h2>
+                    </div>
+                    <p>"안녕하세요. 2020년 8월 24일부터 IT Lead, Business Technology Leader로 함께 일하게 된 김유리입니다. 
+                        한국얀센의 디지털 프로젝트를 담당하고 있으며, 현재는 J pro  사이트 개발을 위해 CE 를 비롯한 
+                        여러 팀들과 협업하고 있습니다. 얀센 입사 전에는 릴리와 로슈에서 IT와 비즈니스를 연결하며 의료진을 위한 
+                        포털 사이트, 환자의 질환 관리를 돕는 모바일 애플리케이션, 카카오톡 등 다양한 디지털 채널/솔루션 
+                        개발 프로젝트에 참여했습니다. '태어나기 전보다 세상을 조금이라도 살기 좋은 곳으로 만들고 떠나는 것이 
+                        진정한 성공' 이라는 말처럼 내가 머문 곳을 전보다 조금이라도 나은 곳으로 만들고 싶다는 생각을 갖고 
+                        일하고 있습니다. 앞으로 펼쳐질 흥미로운 여정에 동참할 수 있어 기쁩니다. 동료분들과 즐겁게 일하며 
+                        한국얀센의 성공에 도움이 되도록 하겠습니다. 감사합니다."</p>
+                </div>
+                <div class="content_text ">
+                    <div class="hashtag">
+                        <h2>#무적 BT팀</h2>
+                    </div>
+                    <div class="bt_team">
+                        <div class="bt_member">
+                            <img src="img/plus.png" alt="" class="plus">
+                            <img src="img/img03.png" alt="" class="member">
+                            <dl>
+                                <dt>백인기 이사</dt>
+                                <dd>#이_구역의_인기쟁이_나야_나</dd>
+                                <dd>#따뜻한_마음_냉철한_두뇌</dd>
+                                <dd>#아카펠라</dd>
+                                <dd>#축가는_이사님께</dd>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                        <div class="bt_member">
+                            <img src="img/plus.png" alt="" class="plus">
+                            <img src="img/img04.png" alt="" class="member">
+                            <dl>
+                                <dt>유가영 대리</dt>
+                                <dd>#Data #Analytics</dd>
+                                <dd>#얀센의_산소같은_그녀</dd>
+                                <dd>#원더우먼</dd>
+                                <dd>#어디선가_누군가에_무슨_일이_생기면_틀림없이_나타난다</dd>
+                            </dl>
+                        </div>
+                        <div class="bt_member">
+                            <img src="img/plus.png" alt="" class="plus">
+                            <img src="img/img05.png" alt="" class="member">
+                            <dl>
+                                <dt>박지호</dt>
+                                <dd>#재택요정</dd>
+                                <dd>#도비는_얀센에서_열심히_배우고_있습니다</dd>
+                                <dd>#작고_소중한_관심_부탁드려요</dd>
+                                <dd></dd>
+                            </dl>
+                        </div>
+                    </div>    
+                </div>
+            </section>
+            <section class="content04">
+                <div class="content_logo">
+                    <div class="logo_box">
+                        <img src="img/logo.png" alt="logo">
+                        <span>Janssen BT</span>
+                    </div>
+                    <div class="more"><img src="img/more.png" alt=""></div>
+                </div>
+                <div class="content_text">
+                    <p>"여러분들이 추진하시는 공식적인 프로젝트에 대한 기술적인 자문 뿐만 아니라 평소 고민하고 계시던 
+                        아이디어에 대한 구체화를 함께 이야기해 볼 수 있는 채널을 마련하였습니다. 디지텅 기술이나 트렌드에 
+                        대한 간단한 문의부터 구현하고 싶은 디지털 솔루션에 대해 검토하고 계신 외부 솔루션 등 조언과 
+                        가이드가 필요하신 어떤 것에 대해서라도 미리 요청해 주시면 해당 시간에 온라인 혹은 오프라인으로 
+                        진행이 가능합니다. <br/>
+                        <strong>아래 이메일 주소로 약 1주 전에 주제를 문의해 주시면 BT 팀이 준비하여 세션을 함께하는 식으로 진행</strong>
+                        하려고 합니다. 감사합니다"</p>
+                </div>
+                
+                <div class="bg">
+                    <div class="letter">
+                        
+                        <p>Janssen BT 팀의 공식 이메일 주소는 <br>
+                        RA-JACKR-IT-Janssen@ITS.JNJ.com 입니다.</p>
+                        <br/>
+                        <p><img src="img/on.png"><strong>BT 오픈 아워 (Open Hour)</strong></p>
+                        <br/>
+                        <p>BT팀의 오픈아워는 월요일 2시~3시 입니다.<br/>
+                        궁금하신 사항이 있으시면 넉넉한 기간 내에 주제를 제출해주시고,<br/>
+                        저희와 협의하여 예약 후 <a href=""><span>팀즈 링크</span></a>를 통해 방문해주세요.</p>
+                        <img src="img/bg_logo.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

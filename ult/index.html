@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css?version=1.0.0">
+    <!-- <link rel="stylesheet" type="text/css" href="css/starbucks.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/diptyque.css"> -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 
+
+    <title>울쎄라</title>
+</head>
+<body>
+    <div class="wrap">
+        <header class="header_wrap">
+            <div class="header_box">
+                <img src="img/arrow.png" alt="">
+                <span><strong>테스트일</strong></span>
+                <div class="point">
+                    <span><strong>1050</strong></span>
+                    <img src="img/point.png" alt="point">
+                </div>
+            </div>
+            <div class="util_box">
+                <img src="img/ulthera_logo.png" alt="logo">
+                <div class="btn">
+                    <div class="btn_line"></div>
+                    <div class="btn_line"></div>
+                    <div class="btn_line"></div>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+            <div class="point_use">
+                <img src="img/store.png" alt="">
+                <span>포인트 사용하기</span>
+            </div>
+            <section class="starbucks">
+                <div class="img_box">
+                    <img src="img/starbucks.png" alt="">
+                </div>
+                <div class="product">
+                    <div class="product_info">
+                        <p class="product_title"><strong>스타벅스</strong></p>
+                        <p class="product_text">스타벅스 쿠폰</p>
+                    </div>
+                    <div class="product_box">
+                        <div class="point_price">
+                            <span>300</span>
+                            <img src="img/point.png" alt="">
+                        </div>
+                        <a id="btn-starbucks" class="apply">신청하기</a>
+                    </div>
+                </div>
+            </section>
+            <section class="cgv">
+                <div class="img_box">
+                    <img src="img/cgv.png" alt="">
+                </div>
+                <div class="product">
+                    <div class="product_info">
+                        <p class="product_title"><strong>CGV</strong></p>
+                        <p class="product_text">영화쿠폰 2매</p>
+                    </div>
+                    <div class="product_box">
+                        <div class="point_price">
+                            <span>700</span>
+                            <img src="img/point.png" alt="">
+                        </div>
+                        <a id="btn-cgv" class="apply">신청하기</a>
+                    </div>
+                </div>
+            </section>
+            <section class="diptyque">
+                <div class="img_box">
+                    <img src="img/diptyque.png" alt="">
+                </div>
+                <div class="product">
+                    <div class="product_info">
+                        <p class="product_title"><strong>딥디크</strong></p>
+                        <p class="product_text">핸드크림(오 로즈)</p>
+                    </div>
+                    <div class="product_box">
+                        <div class="point_price">
+                            <span>1000</span>
+                            <img src="img/point.png" alt="">
+                        </div>
+                        <a id="btn-diptyque" class="apply">신청하기</a>
+                    </div>
+                </div>
+            </section>
+            <p class="text">* 공급사의 사정에 따라 상품이 변경될 수 있습니다.</p>
+        </div>
+    </div>
+
+    <div id="starbucks" class="modal_wrap" style="display: none;">
+        <div class="modal_container">
+            <div class="product_text_box">
+                <div class="product_text">
+                    <img src="img/basket.png" alt="">
+                    <p class="product_title">스타벅스</p>
+                    <span>스타벅스 쿠폰</span>
+                </div>
+                <img src="img/x.png" alt="" class="modal--close">
+            </div>
+            <div class="num_info">
+                <div class="num_text">
+                    <img src="img/tel.png" alt="">
+                    <span>수령 전화번호</span>
+                </div>
+                <div class="num_box">
+                    <input type="tel" placeholder="01011112222">
+                    <a href=""><img src="img/write.png">번호수정</a>
+                </div>
+            </div>
+            <div class="point_use">
+                <img src="img/point.png">
+                <span>포인트 사용</span>
+            </div>
+            <div class="point_details">
+                <div class="point_box">
+                    <span>보유 포인트</span>
+                    <span>1,050</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_box">
+                    <span>사용 예정 포인트</span>
+                    <span>300</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_apply">
+                    <a href="">신청하기</a>
+                </div>
+            </div>
+            <p>*본 상품은 매주 월요일 발송됩니다. 다만 공휴일이 겹칠 시에는 익일 배송됩니다.</p>
+        </div>
+    </div>    
+
+    <div id="cgv" class="modal_wrap" style="display: none;">
+        <div class="modal_container">
+            <div class="product_text_box">
+                <div class="product_text">
+                    <img src="img/basket.png" alt="">
+                    <p class="product_title">CGV</p>
+                    <span>영화쿠폰 2매</span>
+                </div>
+                <img src="img/x.png" alt="" class="modal--close">
+            </div>
+            <div class="num_info">
+                <div class="num_text">
+                    <img src="img/tel.png" alt="">
+                    <span>수령 전화번호</span>
+                </div>
+                <div class="num_box">
+                    <input type="tel" placeholder="01011112222">
+                    <a href=""><img src="img/write.png">번호수정</a>
+                </div>
+            </div>
+            <div class="point_use">
+                <img src="img/point.png">
+                <span>포인트 사용</span>
+            </div>
+            <div class="point_details">
+                <div class="point_box">
+                    <span>보유 포인트</span>
+                    <span>1,050</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_box">
+                    <span>사용 예정 포인트</span>
+                    <span>700</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_apply">
+                    <a href="">신청하기</a>
+                </div>
+            </div>
+            <p>*본 상품은 매주 월요일 발송됩니다. 다만 공휴일이 겹칠 시에는 익일 배송됩니다.</p>
+        </div>  
+    </div>
+      
+    
+    <div id="diptyque" class="modal_wrap" style="display: none;">
+        <div class="modal_container">
+            <div class="product_text_box">
+                <div class="product_text">
+                    <img src="img/basket.png" alt="">
+                    <p class="product_title">딥디크</p>
+                    <span>핸드크림(오 로즈)</span>
+                </div>
+                <img src="img/x.png" alt="" class="modal--close">
+            </div>
+            <div class="num_info">
+                <div class="num_text">
+                    <img src="img/tel.png" alt="">
+                    <span>수령 전화번호</span>
+                </div>
+                <div class="num_box">
+                    <input type="tel" placeholder="01011112222">
+                    <a href=""><img src="img/write.png">번호수정</a>
+                </div>
+            </div>
+            <div class="address_info">
+                <div class="address_text">
+                    <img src="img/adress.png">
+                    <span>수령 주소</span>
+                </div>
+                <div class="address_box">
+                    <span>우편번호 검색을 해주세요.</span>
+                    <a href="">우편번호 검색</a>
+                </div>
+            </div>
+            <div class="address_info">
+                <div class="address_text">
+                    <img src="img/map.png" class="map">
+                    <span>상세주소</span>
+                </div>
+                <div class="address_box">
+                    <input type="text" placeholder="상세주소를 입력해주세요.">
+                </div>
+            </div>
+            <div class="point_use">
+                <img src="img/point.png">
+                <span>포인트 사용</span>
+            </div>
+            <div class="point_details">
+                <div class="point_box">
+                    <span>보유 포인트</span>
+                    <span>1,050</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_box">
+                    <span>사용 예정 포인트</span>
+                    <span>1,000</span>
+                    <img src="img/point.png">
+                </div>
+                <div class="point_apply">
+                    <a href="">신청하기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="login" class="modal_wrap" ">
+        <div class="login_container">
+            <div class="login_box">
+                <span>로그인</span>
+                <img src="img/close.png" alt="" class="modal--close">
+            </div>
+            <div class="login_num_box">
+                <img src="img/login_tel.png" alt="">
+                <span>휴대폰번호</span>
+                <input type="tel" placeholder="숫자만 입력 가능합니다">
+            </div>
+            <div class="password_box">
+                <img src="img/password.png" alt="">
+                <span>비밀번호</span>
+                <input type="password" placeholder="6자 이상의 영문/숫자 조합">
+            </div>
+            <div class="login_btn">
+                <img src="img/login.png" alt="">
+                <span>로그인</span>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $modal_starbucks = $("#starbucks");
+        $("#btn-starbucks").click(function(){
+            $modal_starbucks.show();
+            return false;
+        });
+        $(".modal--close").click(function(){
+            $modal_starbucks.hide();
+        });
+
+        $modal_cgv = $("#cgv");
+        $("#btn-cgv").click(function(){
+            $modal_cgv.show();
+            return false;
+        });
+        $(".modal--close").click(function(){
+            $modal_cgv.hide();
+        });
+
+        $modal_diptyque = $("#diptyque");
+        $("#btn-diptyque").click(function(){
+            $modal_diptyque.show();
+            return false;
+        });
+        $(".modal--close").click(function(){
+            $modal_diptyque.hide();
+        });
+
+         $modal_login = $("#login");
+        // $("#btn-login").click(function(){
+        //     $modal_login.show();
+        //     return false;
+        // });
+        $(".modal--close").click(function(){
+            $modal_login.hide();
+        });
+    });
+
+
+</script>
+</body>
+</html>
