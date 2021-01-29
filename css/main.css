@@ -81,7 +81,7 @@ header .right {width: 40px; height: 100vh; position: fixed; top: 0; right: 0; ba
 
 
 /* about ----------- */
-.about {height: 100vh;}
+/* .about {height: 100vh;} */
 /* .about span {width: 30%;display: inline-block; margin-top: 300px;} */
 .about .about_text{
     /* position: absolute;
